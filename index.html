@@ -16,14 +16,21 @@
   <div class="gameTitle">
     <h1 class="text-center bg-success text-light">TIC-TAC-TOE GAME</h1>
   </div>
-  <p id="playTurn" class="">X turn</p>
+  <div class="fs-4 text-light bg-warning text-center">
+    <p id="playTurn" class=""></p>
+  </div>
+  <div class="bg-light p-2 text-center">
+    <button id="forJoin" class="btn btn-outline-danger btn-lg btn-warning" onclick="joinGame()">Join game</button>
+    <button id="forStart" class="btn btn-lg btn-success" onclick="startGame()" style="display: none">Start game</button>
+    <button id="forReset" class="btn btn-lg btn-danger" onclick="resetGame()" style="display: none;">Reset game</button>
+  </div>
   <div class="count">
     <span class="XturnCoun" id="XturnCoun"></span>
     <span class="YturnCoun" id="YturnCoun"></span>
   </div>
-      <div class="hero bg-warning">
+      <div class="hero bg-warning" id="forGameSur" style="display: none;">
        <div class="gameSurface">
-        <table class="table table-secondary table align-items-center mx-auto">
+        <table class="table table-secondary table-bordered border-warning">
         <tr>
           <td id="forClk1" onclick="clk1()"></td>
           <td id="forClk2" onclick="clk2()"></td>
@@ -40,8 +47,25 @@
           <td id="forClk9" onclick="clk9()"></td>
         </tr>
       </table></div>
-      <div class="playerDetSur">
-        t
+      <div class="playerDetSur text-center">
+        <table class="table table-striped table-bordered border-success">
+          <tr><td colspan="3">Score Board</td></tr>
+          <tr>
+            <td>Players</td>
+            <td></td>
+            <td>Score</td>
+          </tr>
+          <tr>
+            <td id="forplayer1"></td>
+            <td></td>
+            <td id="firPlayScr">O</td>
+          </tr>
+          <tr>
+            <td id="forplayer2"></td>
+            <td></td>
+            <td id="secPlayScr">O</td>
+          </tr>
+        </table>
       </div>
       </div>
  </div>
